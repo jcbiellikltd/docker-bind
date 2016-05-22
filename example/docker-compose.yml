@@ -1,0 +1,14 @@
+bind:
+  #image: joebiellik/bind
+  build: ../
+
+  volumes:
+    # You must provide a config file
+    - ./named.conf:/etc/bind/named.conf
+
+    # Zones
+    - ./zones:/var/lib/bind
+
+  ports:
+    - "53:53/tcp"
+    - "53:53/udp"

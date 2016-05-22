@@ -1,0 +1,24 @@
+$TTL 1d
+@ IN SOA ns1.example.com. root.example.com. (
+        2016010101      ; serial
+        28800           ; refresh (8 hours)
+        7200            ; retry (2 hours)
+        2419200         ; expire (4 weeks)
+        86400           ; minimum (1 day)
+)
+                NS      ns1.example.com.
+                NS      ns2.example.net.
+                NS      ns3.example.org.
+                NS      ns4.example.com.
+ns1             IN      A               1.2.3.4
+ns2             IN      A               1.2.3.4
+ns3             IN      A               1.2.3.4
+ns4             IN      A               1.2.3.4
+@               IN      A               1.2.3.4
+www             IN      CNAME   @
+@               IN      MX      1       aspmx.l.google.com.
+@               IN      MX      5       alt1.aspmx.l.google.com.
+@               IN      MX      5       alt2.aspmx.l.google.com.
+@               IN      MX      10      aspmx2.googlemail.com.
+@               IN      MX      10      aspmx3.googlemail.com.
+@               IN      TXT             "v=spf1 mx a include:_spf.google.com ~all"
