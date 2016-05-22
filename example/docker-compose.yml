@@ -1,6 +1,5 @@
 bind:
-  #image: joebiellik/bind
-  build: ../
+  image: joebiellik/bind
 
   volumes:
     # You must provide a config file
