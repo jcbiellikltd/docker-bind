@@ -5,7 +5,7 @@ bind:
     # You must provide a config file
     - ./named.conf:/etc/bind/named.conf
 
-    # Zones
+    # Zone files
     - ./zones:/var/lib/bind
 
   ports:
